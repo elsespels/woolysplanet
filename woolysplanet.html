@@ -178,8 +178,8 @@
         img.style.animation = `fallSheepBounce5 ${duration}s cubic-bezier(.5,1.5,.5,1) ${delay}s forwards`;
         img.style.setProperty('--bounce-height', bounceHeight + 'vh');
 
-        // 20% chance to make the sheep blue
-        if (Math.random() < 0.2) {
+        // 1 in 20 chance to make the sheep blue
+        if (Math.floor(Math.random() * 20) === 0) {
           img.style.filter = 'hue-rotate(180deg) saturate(2)';
           img.title = 'Blue Sheep!';
         }
